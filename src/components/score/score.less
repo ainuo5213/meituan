@@ -1,0 +1,19 @@
+@import "../../common/common";
+.star {
+  .px2rem(width, 10);
+  .px2rem(height, 10);
+  float: left;
+  background-size: cover;
+
+  &.full-star {
+    background-image: url("images/light-star.png");
+  }
+
+  &.half-star {
+    background-image: url("images/halfstar.png");
+  }
+
+  &.null-star {
+    background-image: url("images/gray-star.png");
+  }
+}

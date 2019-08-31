@@ -1,0 +1,101 @@
+@import "../../../common/common";
+
+.order-item {
+  .border-bottom(13, solid, #efefef);
+  background-color: #fff;
+
+  .evaluation {
+    .px2rem(padding-top, 10);
+    .px2rem(padding-bottom, 10);
+    overflow: hidden;
+
+    .evaluation-btn {
+      float: right;
+      .px2rem(width, 100);
+      .px2rem(height, 32);
+      color: #6b450a;
+      background-color: #ffd161;
+      .px2rem(font-size, 14);
+      .px2rem(line-height, 32);
+      text-align: center;
+      .px2rem(margin-right, 10);
+    }
+  }
+
+  .order-item-inner {
+    display: flex;
+    .px2rem(padding-bottom, 18);
+    .border-bottom(1, solid, #e0e0e0);
+
+    .item-img {
+      .px2rem(width, 40);
+      .px2rem(height, 40);
+      .px2rem(margin-top, 8);
+      .px2rem(margin-left, 16);
+      .px2rem(border-radius, 50%);
+    }
+
+    .item-right {
+      flex: 1;
+      .px2rem(margin-left, 15);
+
+      .item-top {
+        .px2rem(height, 55);
+        .px2rem(padding, 2);
+        display: flex;
+        align-items: center;
+        .border-bottom(1, solid, #e0e0e0);
+
+        .order-shop {
+          .px2rem(font-size, 16);
+          .px2rem(width, 180);
+          .px2rem(heihht, 16);
+          font-weight: 600;
+        }
+
+        .arrow {
+          .px2rem(width, 8);
+          .px2rem(height, 8);
+          .border(1, solid, #999);
+          .border-width(1, 1, 0, 0);
+          transform: rotate(45deg);
+        }
+
+        .order-state {
+          .px2rem(margin-left, 40);
+          .px2rem(font-size, 14);
+          color: #999;
+        }
+      }
+
+      .item-bottom {
+
+        .product-item {
+          .px2rem(font-size, 13);
+          color: #666;
+          .px2rem(margin-top, 12);
+          overflow: hidden;
+
+          .product-pay {
+            float: right;
+            .px2rem(margin-right, 15);
+            .px2rem(font-size, 12);
+
+            .total-price {
+              .px2rem(font-size, 14);
+              color: #151515;
+              .px2rem(margin-left, 2);
+            }
+          }
+
+          .product-count {
+            float: right;
+            .px2rem(margin-right, 15)
+          }
+        }
+      }
+
+    }
+
+  }
+}

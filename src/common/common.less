@@ -1,0 +1,70 @@
+@baseFontSize: 37.5;
+
+.scale-1px {
+  position: relative;
+  border: none;
+}
+
+.scale-1px::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: 0;
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+}
+
+.px2rem(@name, @px) {
+    @{name}: unit(@px / @baseFontSize, rem);
+}
+
+.background-size (@width-px, @height-px) {
+  background-size: unit(@width-px / @baseFontSize, rem) unit(@height-px / @baseFontSize, rem);
+}
+
+.border-bottom(@px, @solid, @color) {
+  border-bottom: unit(@px / @baseFontSize, rem) @solid @color;
+}
+
+.border-top(@px, @solid, @color) {
+  border-top: unit(@px / @baseFontSize, rem) @solid @color;
+}
+
+.border-left(@px, @solid, @color) {
+  border-left: unit(@px / @baseFontSize, rem) @solid @color;
+}
+
+.border-right(@px, @solid, @color) {
+  border-right: unit(@px / @baseFontSize, rem) @solid @color;
+}
+
+.line-height(@px) {
+  line-height: unit(@px / @baseFontSize, rem);
+}
+
+.border(@px, @solid, @color) {
+  border: unit(@px / @baseFontSize, rem) @solid @color;
+}
+
+.border-width (@top, @right, @bottom, @left) {
+  border-width: unit(@top / @baseFontSize, rem) unit(@right / @baseFontSize, rem) unit(@bottom / @baseFontSize, rem) unit(@left / @baseFontSize, rem);
+}
+
+.one-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.padding(@top-px,@right-px, @bottom-px, @left-px) {
+  padding: unit(@top-px / @baseFontSize, rem) unit(@right-px / @baseFontSize, rem) unit(@bottom-px / @baseFontSize, rem) unit(@left-px / @baseFontSize, rem);
+}
+
+.clearFix::after {
+  content: '';
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}

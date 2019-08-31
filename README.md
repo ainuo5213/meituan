@@ -1,2 +1,3 @@
-# meituan
-美团项目
+```javascript
+yarn start
+```

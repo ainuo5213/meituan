@@ -1,0 +1,78 @@
+@import "../../../../common/common";
+
+.search-bar {
+  width: 100%;
+  .px2rem(height, 40);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .px2rem(padding-top, 14);
+
+  .bar-loc {
+    .px2rem(margin-right, 20);
+    .px2rem(border-radius, 13);
+    background-color: rgba(0, 0, 0, .33);
+    .px2rem(height, 28);
+    .px2rem(width, 92);
+
+    .loc-icon {
+      display: inline-block;
+      .px2rem(width, 15);
+      .px2rem(height, 20);
+      .px2rem(vertical-align, 8);
+      .px2rem(margin-left, 8);
+      background-image: url("images/locationIcon.png");
+      background-size: cover;
+    }
+
+    .loc-text {
+      .px2rem(font-size, 14);
+      display: inline-block;
+      color: #fff;
+      .px2rem(vertical-align, 12);
+      .px2rem(margin-left, 8);
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        .px2rem(width, 14px);
+        .px2rem(height, 14px);
+        background-image: url("images/arrowIcon.png");
+        background-size: cover;
+        .px2rem(right, -15);
+        .px2rem(top, -1)
+      }
+    }
+  }
+
+  .search-btn {
+    .px2rem(width, 170);
+    .px2rem(height, 30);
+    background-color: #fff;
+    .px2rem(border-radius, 20);
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      .px2rem(width, 14);
+      .px2rem(height, 14);
+      position: absolute;
+      .px2rem(top, 7);
+      .px2rem(left, 10);
+      background-image: url("images/searchIcon.png");
+      background-size: cover;
+    }
+
+    .place-holder {
+      color: #a9a9a9;
+      .px2rem(font-size, 14);
+      height: 100%;
+      .px2rem(line-height, 30);
+      .px2rem(margin-left, 28)
+    }
+  }
+}

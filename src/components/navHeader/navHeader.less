@@ -1,0 +1,28 @@
+@import "../../common/common";
+
+.nav-header {
+  .px2rem(height, 64);
+  border-bottom: 1px solid #b2b2b2;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  background-color: #fff;
+
+  .back-icon {
+    .px2rem(width, 27);
+    .px2rem(height, 27);
+    position: absolute;
+    .px2rem(top, 27);
+    .px2rem(left, 27);
+    background-image: url("./images/back.png");
+    background-size: cover;
+  }
+
+  .title {
+    .px2rem(font-size, 17);
+    color: #2f2f2f;
+    text-align: center;
+    .px2rem(line-height, 84);
+  }
+}

@@ -1,0 +1,116 @@
+@import "../../common/common";
+
+.profile {
+  .profile-header {
+    width: 100%;
+    .px2rem(height, 160);
+    background-image: url("images/header.png");
+    background-size: cover;
+    overflow: hidden;
+
+    .avatar {
+      .px2rem(width, 72);
+      .px2rem(height, 72);
+      margin: 0 auto;
+      display: block;
+      .px2rem(margin-top, 25);
+      .border(3, solid, rgba(255, 255, 255, .4));
+      border-radius: 50%;
+    }
+
+    .nikename {
+      color: #333;
+      .px2rem(font-size, 16);
+      text-align: center;
+      .px2rem(margin-top, 15);
+    }
+
+  }
+
+  .profile-content {
+    .px2rem(min-height, 460);
+    background-color: #eee;
+
+    .profile-items {
+      .border-bottom(10, solid, #eee);
+      background-color: #fff;
+
+      li {
+        .px2rem(height, 45);
+        .px2rem(font-size, 14);
+        .px2rem(line-height, 45);
+        position: relative;
+        .px2rem(padding-left, 26);
+        .px2rem(margin-left, 15);
+        .border-bottom(1, solid, #e4e4e4);
+
+        &:last-of-type {
+          border-bottom: 0 solid #e4e4e4;
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          .px2rem(width, 16);
+          .px2rem(height, 16);
+          position: absolute;
+          top: 50%;
+          .px2rem(left, 1);
+          transform: translateY(-50%);
+          background-size: cover !important;
+        }
+
+        &::after {
+          content: '>';
+          display: block;
+          .px2rem(width, 16);
+          .px2rem(height, 16);
+          position: absolute;
+          top: 0;
+          .px2rem(right, 9);
+          color: #aaa;
+        }
+
+        &.profile-address {
+          &::before {
+            background: url("images/address.png");
+          }
+        }
+
+        &.profile-discount {
+          &::before {
+            background: url("images/money.png");
+          }
+        }
+
+        &.profile-feedback {
+          &::before {
+            background: url("images/email.png");
+          }
+        }
+
+        &.profile-question {
+          &::before {
+            background: url("images/question.png");
+          }
+        }
+      }
+    }
+
+    .profile-tel {
+      .px2rem(font-size, 15);
+      color: #ffb000;
+      text-align: center;
+      .px2rem(height, 46);
+      .px2rem(line-height, 46);
+      background-color: #fff;
+    }
+
+    .profile-time {
+      .px2rem(font-size, 14);
+      text-align: center;
+      .px2rem(margin-top, 13);
+      color: #999;
+    }
+  }
+}

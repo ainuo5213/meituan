@@ -1,0 +1,116 @@
+@import "../../../../../common/common";
+
+
+.comment-item {
+  display: flex;
+  .padding(15, 15, 12, 15);
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+
+  .left {
+    .avatar {
+      .px2rem(width, 80);
+      .px2rem(height, 80)
+    }
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .px2rem(padding-left, 10);
+
+    .right-top {
+      display: flex;
+      height: 15px;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+
+      .comment-time {
+        .px2rem(font-size, 12);
+        color: #898989;
+      }
+
+      .nickname {
+        color: #2f2f2f;
+        .px2rem(font-size, 16);
+      }
+
+    }
+
+    .right-middle {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      .star-and-time {
+        .px2rem(margin-top, 6);
+        display: flex;
+
+        .send-time {
+          color: #898989;
+          .px2rem(font-size, 12);
+          .px2rem(margin-left, 10);
+        }
+      }
+
+      .comment-text {
+        box-sizing: border-box;
+        .px2rem(font-size, 14);
+        .px2rem(margin-top, 6);
+        .px2rem(line-height, 19);
+      }
+    }
+
+    .right-bottom {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      .like-info {
+        .px2rem(font-size, 12);
+        .px2rem(margin-top, 5);
+        .px2rem(line-height, 18);
+        color: #576b95;
+        background-image: url('./images/favor.png');
+        background-repeat: no-repeat;
+        background-position: left 1px;
+        .background-size(12, 12);
+        .px2rem(padding-left, 20);
+      }
+
+      .img-content {
+        .px2rem(margin-top, 8);
+        .px2rem(margin-top, 5);
+        overflow: hidden;
+
+        .img-item {
+          display: block;
+          float: left;
+          .px2rem(width, 80);
+          .px2rem(height, 80);
+          .px2rem(margin, 5);
+          background-size: cover;
+          background-position: center center;
+        }
+      }
+
+      .tag-info {
+        .px2rem(margin-top-left, 4);
+        .px2rem(margin-top, 5);
+        color: #898989;
+        .px2rem(font-size, 12);
+        .px2rem(line-height, 18);
+        .background-size(12, 12);
+        .px2rem(padding-left, 20);
+        background-image: url('./images/tag.png');
+        background-repeat: no-repeat;
+        background-position: left 1px;
+      }
+
+    }
+  }
+}

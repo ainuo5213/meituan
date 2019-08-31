@@ -1,0 +1,83 @@
+@import "../../../common/common";
+.comment {
+  width: 100%;
+  overflow: hidden;
+
+  .comment-inner {
+    .comment-score {
+      display: flex;
+      .px2rem(padding-left, 25);
+      .px2rem(padding-right, 25);
+      .px2rem(padding-top, 15);
+      .px2rem(padding-bottom, 15);
+      .border-top(10, solid, #f6f6f6);
+      .border-bottom(1, solid, #d5d5d5);
+
+      .mail-comment-score {
+        .mail-score {
+          .px2rem(font-size, 32);
+          color: #ffb000;
+          .px2rem(margin-bottom, 5);
+        }
+
+        .mail-text {
+          .px2rem(font-size, 12);
+          color: #656565;
+        }
+      }
+
+      .mail-score-content {
+        display: flex;
+        flex-direction: column;
+
+      }
+
+      .other-score-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: space-around;
+
+        .package-score, .taste-score {
+          display: flex;
+          justify-content: center;
+        }
+
+        .send-score-content {
+          display: flex;
+          flex-direction: column;
+          .px2rem(margin-top, 3);
+
+          .send-score {
+            .px2rem(font-size, 24);
+            flex: 1;
+            color: #999;
+            .px2rem(margin-bottom, 5);
+            text-align: center;
+          }
+
+          .send-text {
+            .px2rem(font-size, 12);
+            color: #999;
+          }
+
+        }
+
+        .taste-star-wrap, .package-star-wrap {
+          .px2rem(margin-left, 15);
+          .px2rem(margin-right, 15);
+        }
+
+        .taste-text, .package-text {
+          .px2rem(font-size, 12);
+          color: #554343;
+        }
+
+        .taste-score-text, .package-score-text {
+          .px2rem(font-size, 15);
+          color: #ffb000;
+        }
+      }
+    }
+  }
+}

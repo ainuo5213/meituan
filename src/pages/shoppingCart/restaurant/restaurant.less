@@ -1,0 +1,96 @@
+@import "../../../common/common";
+
+.restaurant-content {
+  background-color: #f6f6f6;
+  overflow: hidden;
+
+  .restaurant-basic {
+    color: #2f2f2f;
+    background-color: #fff;
+    .px2rem(font-size, 14);
+    .px2rem(margin-top, 10);
+    .px2rem(padding-left, 15);
+    .px2rem(padding-right, 15);
+    box-sizing: border-box;
+
+    .res-section {
+      .px2rem(padding-top, 15);
+      .px2rem(padding-bottom, 15);
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+
+      &.restaurant-send-time::before {
+        background-image: url('./images/time.png');
+      }
+
+      &.restaurant-send-type::before {
+        background-image: url('./images/info.png');
+      }
+
+      &:before {
+        display: block;
+        content: '';
+        .px2rem(margin-right, 20);
+        .px2rem(width, 16);
+        .px2rem(height, 16);
+        background-size: cover;
+      }
+
+      &.restaurant-tel {
+        &::before {
+          .px2rem(width, 19);
+          background-image: url('./images/tel.png');
+        }
+      }
+
+      &.restaurant-addr {
+        position: relative;
+
+        &::before {
+          .px2rem(width, 19);
+          background-image: url('./images/address.png');
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        .addr-wrap {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          .px2rem(margin-left, 36);
+
+          .addr-name {
+            .px2rem(line-height, 20);
+          }
+
+          .addr-text {
+            flex: 1;
+            .px2rem(line-height, 20);
+          }
+        }
+      }
+
+      &.restaurant-pay-type {
+        &::before {
+          display: none;
+        }
+
+        .icon {
+          .px2rem(width, 17);
+          .px2rem(height, 17);
+          .px2rem(margin-right, 20);
+        }
+      }
+
+      .meituan-send {
+        background-color: #ffd161;
+        color: #333;
+        .px2rem(font-size, 10);
+        .px2rem(padding, 4);
+        .px2rem(border-radius, 4);
+        .px2rem(margin-right, 4);
+      }
+    }
+  }
+}
